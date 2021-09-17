@@ -40,3 +40,8 @@ class Wizard extends Player{
 
 const wizard1=new Wizard('shelly','healer')
 const Wizard2=new Wizard('Shaun','Dark magics')
+
+
+
+//Building Arrays
+//When we build data structures from scratch in this course, we will be using the Javascript's Class keyword to create these data structures.
