@@ -134,4 +134,4 @@ function containsCommonItems(arr1,arr2)
   }
   return false
 }             //but problem with this solution is, this has nested for loops,so it's not very efficient
-              //this is of O(n^2)
+              //this is of O(n^2), it's actually O(a*b)
