@@ -45,3 +45,43 @@ const Wizard2=new Wizard('Shaun','Dark magics')
 
 //Building Arrays
 //When we build data structures from scratch in this course, we will be using the Javascript's Class keyword to create these data structures.
+//Array with the help of classes and constructor
+
+class MyArray{
+  constructor(){
+    this.length=0;
+    this.data={};
+  }
+  get(index){
+    return this.data[index]
+  }
+  push(item){
+    this.data[this.length]=item;
+    this.length++;
+    return this.length;
+  }
+  pop(){
+    const lastItem=this.data[this.length-1];
+    delete this.data[this.length-1]
+    this.length--;
+    return lastItem;
+  }
+  delete(index){
+    const item=this.data[index];
+    this.shiftItems(index);
+  }
+  shiftItems(index){
+    for(let i=index;i<this.length-1;i++){
+      this.data[i]=this.data[i+1];
+    }
+    // this.data[this.length-1]
+  }
+}
+
+const newArray=new MyArray();
+newArray.push('Hi');
+newArray.push('you');
+newArray.push('haha');
+// newArray.pop();
+newArray.delete(1)
+console.log(newArray);
