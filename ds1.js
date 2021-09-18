@@ -174,3 +174,11 @@ function containsCommonItem2(arr1, arr2){
 
 }
  containsCommonItem2(arr1, arr2)
+
+//Specific JS method to do the same in 2 lines
+const arr1 = ['a', 'b', 'c', 'd', 'e'];
+ const arr2 = ['x', 'y', 'z','a'];
+function containsCommonItem3(arr1,arr2){
+  return arr1.some(item=>arr2.includes(item))
+}
+containsCommonItem3(arr1,arr2)
