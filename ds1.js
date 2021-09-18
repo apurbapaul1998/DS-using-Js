@@ -135,3 +135,42 @@ function containsCommonItems(arr1,arr2)
   return false
 }             //but problem with this solution is, this has nested for loops,so it's not very efficient
               //this is of O(n^2), it's actually O(a*b)
+
+
+const arr1 = ['a', 'b', 'c', 'd', 'e'];
+const arr2 = ['x', 'y', 'z','a'];
+//array1==>obj{
+//a:true
+//b:true
+//c:true
+//d:true
+//e:true
+//}
+//array2[index]===obj.properties[will check if elements of arr2 is present in the object or not] //we wiil be using this approach a lot of times
+//in this we can only loop through arr2, this will decrease the time complexity dramatically
+
+function containsCommonItem2(arr1, arr2){
+  //loop through first array and create object where properties===items in the array
+  //loop through 2nd array and chheck if item in 2nd array exists on created object.
+  //here it's O(a+b),it's a big saving
+
+  let map = {};
+  for (let i = 0; i < arr1.length; i++) {
+    if (!map[arr1[i]]) {
+      const item = arr1[i];
+      map[item] = true;
+
+    }
+  }
+  // console.log(map)
+  //loop through 2nd array and check if item in 2nd array exists on created object.
+  for (let j=0;j<arr2.length;j++){
+    if(map[arr2[j]]){
+      return true
+    }
+  }
+  return false
+
+
+}
+ containsCommonItem2(arr1, arr2)
