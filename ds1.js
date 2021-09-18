@@ -114,3 +114,24 @@ reverse2('Hi this is Apurba')
 function reverse3 = str=>str.split('').reverse().join('');
 //with Spread operator\\
 function reverse4 = str=>[...str].reverse().join('');
+
+
+// Given two arrays\\
+// build a function that will return true if, there is a common Element,
+// will return false if those two arrays don't have a common element\\
+const arr1=['a','b','c','d','e'];
+const arr2=['x','y','z'];
+
+function containsCommonItems(arr1,arr2)
+{
+  for(let i=0;i<arr1.length;i++){
+    for(let j=0;j<arr2.length;j++)
+    {
+      if(arr1[i]===arr2[j]){
+        return true;
+      }
+    }
+  }
+  return false
+}             //but problem with this solution is, this has nested for loops,so it's not very efficient
+              //this is of O(n^2)
