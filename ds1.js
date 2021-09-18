@@ -85,3 +85,32 @@ newArray.push('haha');
 // newArray.pop();
 newArray.delete(1)
 console.log(newArray);
+
+
+//Reverse a string
+function reverse(str){
+  //check the input
+  if(!str||str.length<2||typeof(str)!=='string'){
+    return ('hmm that is not good ')
+  }
+  const backwards=[];
+  const totalItems=str.length-1;
+  for(let i=totalItems;i>=0;i--){
+    backwards.push(str[i]);
+  }
+  return backwards.join('') //we will return a string only, join converts to a string from an array
+}
+reverse('Hi my name is Apurba')
+
+
+//2nd way\\
+function reverse2(str){
+  return str.split('').reverse().join('')   //.split to convert from str to arr, .join to convert from str to arr
+}
+reverse2('Hi this is Apurba')
+
+
+//3rd Way\\
+function reverse3 = str=>str.split('').reverse().join('');
+//with Spread operator\\
+function reverse4 = str=>[...str].reverse().join('');
