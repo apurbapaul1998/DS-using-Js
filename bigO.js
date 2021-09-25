@@ -11,3 +11,5 @@ function findMini(array){
     console.log("call to find mini took"+(t1-t0)+"ms")
 }
 findMini(mini)
+
+//big O allows us and concerns us with how many steps it takes in a function
