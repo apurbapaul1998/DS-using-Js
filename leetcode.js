@@ -31,7 +31,7 @@
     
 };
 
-//maximum subarray//
+//maximum subarray//   Kadane's Algorithm
 var maxSubArray = function(nums) {
     let sum=0;
     let maxi= nums[0];
